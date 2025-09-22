@@ -15,7 +15,15 @@
   </head>
   <body>
     <section class="hero">
-      <video class="hero__video" autoplay muted loop playsinline>
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        data-loaded="false"
+      >
         <source src="./src/assets/video/electro.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -109,7 +117,6 @@
         </div>
       </div>
     </section>
-
     <section class="advantages">
       <div class="container">
         <div class="advantages__header">
@@ -547,8 +554,18 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         AOS.init();
+        const video = document.querySelector(".hero__video");
         const burgerMenu = document.querySelector(".burger-menu");
         const navListMobile = document.querySelector(".nav__list-mobile");
+
+        if (video) {
+          video.load();
+          video.play().catch(() => {
+            document.body.addEventListener("click", () => video.play(), {
+              once: true,
+            });
+          });
+        }
 
         burgerMenu.addEventListener("click", () => {
           navListMobile.classList.toggle("active");
