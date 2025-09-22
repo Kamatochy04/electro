@@ -16,6 +16,11 @@
   font-family: "Space Grotesk", sans-serif;
 }
 
+.title {
+  font-size: 1.4rem;
+  text-align: left;
+}
+
 html {
   overflow-x: hidden;
 

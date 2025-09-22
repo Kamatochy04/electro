@@ -19,6 +19,11 @@ $overlay-color: rgba(0, 0, 0, 0.7);
     margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__grid {
@@ -32,7 +37,7 @@ $overlay-color: rgba(0, 0, 0, 0.7);
     }
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
-      grid-auto-rows: minmax(200px, auto);
+      grid-auto-rows: 250px; /* Фиксированная высота для всех карточек на мобильных */
     }
   }
 
@@ -55,11 +60,6 @@ $overlay-color: rgba(0, 0, 0, 0.7);
       transform: scale(1.1);
     }
 
-    &:hover .portfolio-gallery__content {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
     &--col-1 {
       grid-column: span 1;
     }
@@ -80,6 +80,14 @@ $overlay-color: rgba(0, 0, 0, 0.7);
 
     &--row-2 {
       grid-row: span 2;
+      @media (max-width: 768px) {
+        grid-row: span 1; /* Сбрасываем высоту на мобильных */
+      }
+    }
+
+    @media (max-width: 768px) {
+      grid-column: span 1 !important; /* Все карточки занимают одну колонку */
+      grid-row: span 1 !important; /* Все карточки одной высоты */
     }
   }
 
@@ -101,6 +109,12 @@ $overlay-color: rgba(0, 0, 0, 0.7);
     align-items: flex-start;
     padding: 1rem;
     text-align: left;
+
+    @media (max-width: 768px) {
+      opacity: 1; /* Показываем оверлей сразу на мобильных */
+      transform: translateY(0); /* Убираем анимацию поднятия */
+      transition: none; /* Отключаем переходы */
+    }
   }
 
   &__heading {
@@ -108,12 +122,21 @@ $overlay-color: rgba(0, 0, 0, 0.7);
     font-weight: 600;
     color: #00bfff;
     margin-bottom: 0.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   &__content {
-    transform: translateY(100%);
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(0);
+    opacity: 1;
+    transition: none; /* Отключаем анимацию на мобильных */
+
+    @media (max-width: 768px) {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   &__description {
@@ -121,5 +144,9 @@ $overlay-color: rgba(0, 0, 0, 0.7);
     line-height: 1.5;
     margin: 0;
     color: #fff;
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
   }
 }

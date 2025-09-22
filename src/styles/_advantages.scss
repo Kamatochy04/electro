@@ -18,13 +18,14 @@ $light-text-color: #757575;
   &__title {
     z-index: 1;
 
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: $secondary-color;
     margin: 0;
     text-align: left; /* Заголовок прижат к левому краю */
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-bottom: 10px;
 
     @media (max-width: 768px) {
       font-size: 2rem;
@@ -36,7 +37,6 @@ $light-text-color: #757575;
 
     font-size: 1rem;
     color: $light-text-color;
-    margin-top: 0.5rem;
     max-width: 600px;
     line-height: 1.6;
   }
