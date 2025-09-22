@@ -571,6 +571,13 @@
         burgerMenu.addEventListener("click", () => {
           navListMobile.classList.toggle("active");
         });
+
+        // Закрытие мобильного меню при клике на пункт навигации
+        navListMobile.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navListMobile.classList.remove("active");
+          });
+        });
       });
     </script>
   </body>
