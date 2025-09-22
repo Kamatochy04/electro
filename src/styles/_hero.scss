@@ -4,14 +4,6 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-
-  @media (max-width: 1024px) {
-    min-height: 80vh;
-  }
-
-  @media (max-width: 768px) {
-    min-height: 60vh;
-  }
 }
 
 .hero-content {
@@ -72,29 +64,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: 1;
-
-  &::after {
-    content: "";
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    z-index: 10;
-    display: block;
-  }
-
-  @media (max-width: 1024px) {
-    height: 80vh;
-  }
-
-  @media (max-width: 768px) {
-    height: 60vh;
-  }
 }
 
 .hero__block {

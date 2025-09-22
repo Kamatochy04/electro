@@ -28,12 +28,13 @@
     border-bottom: 1px solid #ffffff64;
 
     @media (max-width: 768px) {
-      padding: 12px 20px;
+      padding: 0 10px;
       text-align: center;
     }
   }
 
   &__logo {
+    font-size: 20px;
     img {
       max-width: 200px;
       height: auto;
@@ -181,7 +182,7 @@
 
   .burger-menu {
     display: none;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
     padding: 10px;
     color: #fff;
@@ -203,23 +204,26 @@
 }
 
 .nav__list-mobile {
-  display: none;
+  display: flex;
   position: absolute;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+
   top: 0;
   z-index: 100;
   left: 0;
   right: 0;
   background: linear-gradient(135deg, #1e3a5f 0%, #0f1a2e 100%);
   padding: 100px 40px 40px 40px;
+  transform: translateY(-100%);
+  transition: all 0.4s;
+  height: 100vh;
 
   &.active {
-    height: 100vh;
-    gap: 15px;
-
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
+    transform: translateY(0);
   }
 
   li {
