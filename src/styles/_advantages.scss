@@ -45,6 +45,7 @@ $light-text-color: #757575;
     z-index: 10;
 
     display: flex;
+
     justify-content: space-between;
     gap: 2rem;
     flex-wrap: wrap; /* Для адаптивности */
@@ -52,14 +53,35 @@ $light-text-color: #757575;
 
   &__item {
     z-index: 10;
-
     flex-basis: calc(25% - 2rem); /* 4 элемента в строку с отступами */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    padding: 0;
+    padding: 10px;
+    border-bottom: 5px solid #248aff;
     background-color: transparent; /* Нет фона, как и запрашивалось */
+    transition: all 0.4s ease-in-out; /* Плавный переход для всех свойств */
+    border-radius: 10px;
+    &:hover {
+      background: rgba(
+        36,
+        138,
+        255,
+        0.17
+      ); /* Легкий голубой фон с прозрачностью */
+      transform: translateY(-5px) scale(1.02); /* Подъем и легкое увеличение */
+      box-shadow: 0 8px 20px rgba(36, 138, 255, 0.3); /* Мягкая тень при наведении */
+      border-bottom-color: #1a6bd8; /* Темнее синяя граница при наведении */
+
+      .advantages__item-title {
+        color: #1a6bd8; /* Изменение цвета заголовка при наведении */
+      }
+
+      .advantages__item-text {
+        color: #333; /* Углубление цвета текста при наведении */
+      }
+    }
 
     @media (max-width: 1024px) {
       flex-basis: calc(50% - 1rem); /* Два элемента в строку на планшетах */
@@ -71,7 +93,6 @@ $light-text-color: #757575;
       text-align: center;
     }
   }
-
   &__icon {
     width: 56px;
     height: 56px;
