@@ -1,11 +1,14 @@
+/* Переменные для палитры */
 $primary-color: #ff5722;
 $secondary-color: #212121;
 $text-color: #424242;
 $overlay-color: rgba(0, 0, 0, 0.7);
+$blue-button-color: #007bff;
 
 .services-gallery {
   background-color: #fff;
   text-align: center;
+  padding: 4rem 0;
 
   &__title {
     font-size: 2.5rem;
@@ -14,39 +17,52 @@ $overlay-color: rgba(0, 0, 0, 0.7);
     margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__container {
     display: flex;
-    flex-wrap: wrap;
-  }
+    flex-wrap: nowrap; /* Услуги располагаются горизонтально */
+    overflow-x: auto; /* Горизонтальная прокрутка при нехватке места */
+    gap: 1rem;
+    padding: 0 15px;
+    -webkit-overflow-scrolling: touch; /* Плавная прокрутка на мобильных */
 
-  &__item {
-    width: 25%;
-    height: 60vh; /* Высота для лучшего отображения */
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
 
-    /* Адаптивность для разных экранов */
-    @media (max-width: 1024px) {
-      width: 50%;
-      height: 40vh;
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
     }
 
     @media (max-width: 768px) {
-      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    width: 100%; /* Каждая карточка занимает всю ширину доступного пространства */
+    min-width: 300px; /* Минимальная ширина карточки для горизонтальной прокрутки */
+    height: 40vh;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 0 0 auto; /* Предотвращает сжатие карточек */
+
+    @media (max-width: 1024px) {
+      height: 35vh;
+    }
+
+    @media (max-width: 768px) {
       height: 30vh;
-    }
-
-    &:hover img {
-      transform: scale(1.05); /* Увеличение картинки при наведении */
-    }
-
-    &:hover .services-gallery__content {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
+      min-width: 250px;
     }
   }
 
@@ -58,7 +74,7 @@ $overlay-color: rgba(0, 0, 0, 0.7);
     transition: transform 0.5s ease;
   }
 
-  &__content {
+  &__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -68,24 +84,73 @@ $overlay-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(100%);
-    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
-    text-align: left;
+    justify-content: center;
+    align-items: flex-start; /* Текст прижат к левому краю */
+    padding: 1.5rem;
+    opacity: 1; /* Текст виден сразу */
+    visibility: visible; /* Текст виден сразу */
+    transform: translateY(0); /* Текст виден сразу */
+    text-align: left; /* Текст выравнивается по левому краю */
+    transition: none; /* Отключаем анимацию */
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
   }
 
   &__heading {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
+    color: #00bfff;
+    max-width: 500px;
+
+    @media (max-width: 1024px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 
   &__text {
-    font-size: 1rem;
+    max-width: 700px;
+    font-size: 1.1rem;
     line-height: 1.5;
-    max-width: 80%;
+    color: #e0f7fa;
+    margin-bottom: 1rem;
+
+    @media (max-width: 1024px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.8rem;
+    background-color: $blue-button-color; /* Синяя кнопка */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(
+        $blue-button-color,
+        10%
+      ); /* Затемнение при наведении */
+    }
+
+    @media (max-width: 768px) {
+      padding: 0.4rem 1.2rem;
+      font-size: 0.9rem;
+    }
   }
 }
