@@ -217,6 +217,13 @@
   }
 }
 
+.header-absolute {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+}
+
 .mob-info {
   display: flex;
   align-items: flex-start;
@@ -228,7 +235,7 @@
 
 .nav__list-mobile {
   display: flex;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-items: center;
   align-items: start;
