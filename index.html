@@ -12,6 +12,50 @@
     />
     <link rel="stylesheet" href="./src/index.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Added favicon -->
+    <link rel="icon" type="image/png" href="./src/assets/icons/ethereum.png" />
+
+    <!-- Added meta description -->
+    <meta
+      name="description"
+      content="Профессиональные электромонтажные услуги для юридических лиц. От проектирования до обслуживания - надежность и качество для вашего бизнеса."
+    />
+
+    <!-- Added meta keywords -->
+    <meta
+      name="keywords"
+      content="электромонтаж, услуги для бизнеса, проектирование электросетей, ремонт электрооборудования, автоматизация систем, Москва"
+    />
+
+    <!-- Added Open Graph meta tags for social media sharing -->
+    <meta
+      property="og:title"
+      content="Электромонтажные услуги для юридических лиц"
+    />
+    <meta
+      property="og:description"
+      content="Профессиональные электромонтажные услуги для юридических лиц. От проектирования до обслуживания - надежность и качество для вашего бизнеса."
+    />
+    <meta property="og:image" content="./src/assets/icons/ethereum.png" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Added Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Электромонтажные услуги для юридических лиц"
+    />
+    <meta
+      name="twitter:description"
+      content="Профессиональные электромонтажные услуги для юридических лиц. От проектирования до обслуживания - надежность и качество для вашего бизнеса."
+    />
+    <meta name="twitter:image" content="./src/assets/icons/ethereum.png" />
+
+    <!-- Added charset and viewport (already present, kept for completeness) -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <section class="hero" id="home">
@@ -31,11 +75,20 @@
         <div class="header__top">
           <div class="container">
             <div class="header__container">
-              <div class="header__logo">Logo-company</div>
+              <div class="header__logo">
+                <img
+                  src="./src/assets/icons/ethereum.png"
+                  class="logo"
+                  alt="logo"
+                />
+              </div>
               <ul class="header__info">
                 <li class="header__info-item">
                   <i class="fas fa-map-marker-alt"></i>
-                  <span>г. Москва, ул. Примерная, д. 10</span>
+                  <span
+                    >г. Гродно, ул. Центральная 107,<br />
+                    ООО Квант Сити, 230028</span
+                  >
                 </li>
                 <li class="header__info-item">
                   <i class="fas fa-clock"></i>
@@ -43,7 +96,7 @@
                 </li>
                 <li class="header__info-item">
                   <i class="fas fa-phone"></i>
-                  <a href="tel:+79991234567">+375 (33) 212-45-67</a>
+                  <a href="tel:+375297864664">+375 (29) 786-46-64</a>
                 </li>
               </ul>
               <div class="burger-menu">
@@ -52,6 +105,8 @@
             </div>
           </div>
         </div>
+      </header>
+      <header class="header-stiky header">
         <nav class="header__nav">
           <div class="container">
             <div class="header__nav-container">
@@ -62,61 +117,64 @@
                 <li><a href="#portfolio">Портфолио</a></li>
                 <li><a href="#contacts">Контакты</a></li>
               </ul>
-              <ul class="nav__list-mobile">
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#advantages">Преимущества</a></li>
-                <li><a href="#portfolio">Портфолио</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-                <div class="mob-info">
-                  <li class="header__info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>г. Москва, ул. Примерная, д. 10</span>
-                  </li>
-                  <li class="header__info-item">
-                    <i class="fas fa-clock"></i>
-                    <span>Пн-Пт: 9:00 - 18:00</span>
-                  </li>
-                  <li class="header__info-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+79991234567">+375 (33) 212-45-67</a>
-                  </li>
-                </div>
-              </ul>
             </div>
           </div>
         </nav>
       </header>
-
+      <ul class="nav__list-mobile">
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#advantages">Преимущества</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+        <div class="mob-info">
+          <li class="header__info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>г. Гродно, ул. Центральная 107, ООО Квант Сити, 230028</span>
+          </li>
+          <li class="header__info-item">
+            <i class="fas fa-clock"></i>
+            <span>Пн-Пт: 9:00 - 18:00</span>
+          </li>
+          <li class="header__info-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+375297864664">+375 (29) 786-46-64</a>
+          </li>
+        </div>
+      </ul>
       <div class="container hero-content">
         <div class="hero__block">
           <h1 class="hero__title">
-            <span>Профессиональные</span> электромонтажные работы любой
+            <span>Профессиональные</span> электромонтажные работы 3 класса
             сложности
           </h1>
           <p class="hero__subtitle">
-            От замены розетки до монтажа электрощита. Ответственный за
+            От проекта до ввода в эксплуатацию . Ответственность за
             электрохозяйство для вашего бизнеса.
           </p>
           <div class="hero__footer">
-            <a href="tel:+79991234567" class="hero__button">
+            <a href="tel:+375297864664" class="hero__button">
               Позвонить для консультации
             </a>
             <div class="hero__socials">
-              <a href="#" class="social-icon">
+              <a
+                href="https://viber://chat?number=+375297864664"
+                class="social-icon"
+              >
                 <i class="fab fa-viber"></i>
               </a>
-              <a href="#" class="social-icon">
+              <a href="https://t.me/+375297864664" class="social-icon">
                 <i class="fab fa-telegram-plane"></i>
               </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-vk"></i>
+              <a href="https://wa.me/375297864664" class="social-icon">
+                <i class="fab fa-whatsapp"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <section class="advantages" id="advantages">
       <div class="container">
         <div class="advantages__header">
@@ -165,92 +223,155 @@
       </div>
     </section>
 
+    <!-- Подключаем Splide.js -->
+    <!-- Splide стили -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
     <section class="services-gallery" id="services">
       <h2 class="advantages__title" data-aos="fade-down">Наши услуги</h2>
-      <div class="services-gallery__container">
-        <div
-          class="services-gallery__item"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-        >
-          <img
-            src="./src/assets/img/exeple.jpg"
-            alt="Электромонтажные работы"
-          />
-          <div class="services-gallery__overlay">
-            <h3 class="services-gallery__heading">Электромонтажные работы</h3>
-            <div class="services-gallery__hover-content">
-              <p class="services-gallery__text">
-                Полный спектр услуг по монтажу и ремонту электропроводки в жилых
-                и коммерческих помещениях. Включает установку розеток,
-                выключателей, щитового оборудования и прокладку кабельных линий
-                с учетом всех норм безопасности.
-              </p>
-              <a href="#" class="services-gallery__button">Заказать услугу</a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="services-gallery__item"
-          data-aos="zoom-in"
-          data-aos-delay="200"
-        >
-          <img
-            src="./src/assets/img/exeple.jpg"
-            alt="Проектирование электросетей"
-          />
-          <div class="services-gallery__overlay">
-            <h3 class="services-gallery__heading">
-              Проектирование электросетей
-            </h3>
-            <div class="services-gallery__hover-content">
-              <p class="services-gallery__text">
-                Разработка профессиональных проектов электроснабжения для
-                объектов любого масштаба. Включает расчет нагрузок, выбор
-                оборудования и согласование с контролирующими органами.
-              </p>
-              <a href="#" class="services-gallery__button">Заказать услугу</a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="services-gallery__item"
-          data-aos="zoom-in"
-          data-aos-delay="300"
-        >
-          <img src="./src/assets/img/exeple.jpg" alt="Обслуживание и ремонт" />
-          <div class="services-gallery__overlay">
-            <h3 class="services-gallery__heading">Обслуживание и ремонт</h3>
-            <div class="services-gallery__hover-content">
-              <p class="services-gallery__text">
-                Регулярное обслуживание и срочный ремонт электрооборудования.
-                Диагностика неисправностей, замена комплектующих и модернизация
-                систем для повышения надежности.
-              </p>
-              <a href="#" class="services-gallery__button">Заказать услугу</a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="services-gallery__item"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
-          <img src="./src/assets/img/exeple.jpg" alt="Автоматизация систем" />
-          <div class="services-gallery__overlay">
-            <h3 class="services-gallery__heading">Автоматизация систем</h3>
-            <div class="services-gallery__hover-content">
-              <p class="services-gallery__text">
-                Установка и настройка систем "умный дом" для управления
-                освещением, климатом и техникой. Интеграция с мобильными
-                приложениями для удобного контроля.
-              </p>
-              <a href="#" class="services-gallery__button">Заказать услугу</a>
-            </div>
-          </div>
+
+      <div class="splide" id="services-splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide services-gallery__item" data-aos="zoom-in">
+              <img
+                src="./src/assets/img/exeple.jpg"
+                alt="Электромонтажные работы"
+              />
+              <div class="services-gallery__overlay">
+                <h3 class="services-gallery__heading">
+                  Электромонтажные работы
+                </h3>
+                <p class="services-gallery__text">
+                  Полный спектр услуг по монтажу и ремонту электропроводки в
+                  жилых и коммерческих помещениях. Установка розеток,
+                  выключателей и щитового оборудования.
+                </p>
+                <a
+                  href="tel:+375297864664"
+                  class="services-gallery__button call-btn"
+                  >Заказать услугу</a
+                >
+              </div>
+            </li>
+
+            <li class="splide__slide services-gallery__item" data-aos="zoom-in">
+              <img
+                src="./src/assets/img/exeple.jpg"
+                alt="Проектирование электросетей"
+              />
+              <div class="services-gallery__overlay">
+                <h3 class="services-gallery__heading">
+                  Проектирование электросетей
+                </h3>
+                <p class="services-gallery__text">
+                  Разработка профессиональных проектов электроснабжения для
+                  объектов любого масштаба. Расчет нагрузок, выбор оборудования
+                  и согласование.
+                </p>
+                <a
+                  href="tel:+375297864664"
+                  class="services-gallery__button call-btn"
+                  >Заказать услугу</a
+                >
+              </div>
+            </li>
+
+            <li class="splide__slide services-gallery__item" data-aos="zoom-in">
+              <img
+                src="./src/assets/img/exeple.jpg"
+                alt="Обслуживание и ремонт"
+              />
+              <div class="services-gallery__overlay">
+                <h3 class="services-gallery__heading">Обслуживание и ремонт</h3>
+                <p class="services-gallery__text">
+                  Регулярное обслуживание и срочный ремонт электрооборудования.
+                  Диагностика и модернизация систем для повышения надежности.
+                </p>
+                <a
+                  href="tel:+375297864664"
+                  class="services-gallery__button call-btn"
+                  >Заказать услугу</a
+                >
+              </div>
+            </li>
+
+            <li class="splide__slide services-gallery__item" data-aos="zoom-in">
+              <img
+                src="./src/assets/img/exeple.jpg"
+                alt="Автоматизация систем"
+              />
+              <div class="services-gallery__overlay">
+                <h3 class="services-gallery__heading">Автоматизация систем</h3>
+                <p class="services-gallery__text">
+                  Установка и настройка систем "умный дом" для управления
+                  освещением, климатом и техникой. Интеграция с мобильными
+                  приложениями.
+                </p>
+                <a
+                  href="tel:+375297864664"
+                  class="services-gallery__button call-btn"
+                  >Заказать услугу</a
+                >
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
+
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Инициализация слайдера
+        new Splide("#services-splide", {
+          type: "loop",
+          perPage: 2,
+          perMove: 1,
+          gap: "1rem",
+          autoplay: true,
+          interval: 3500,
+          pauseOnHover: true,
+          arrows: true,
+          pagination: false,
+          speed: 800,
+          breakpoints: {
+            768: { perPage: 1 },
+          },
+        }).mount();
+
+        // Модальное окно
+      });
+    </script>
+
+    <!-- Splide.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#services-splide", {
+          type: "loop", // бесконечная прокрутка
+          perPage: 3, // количество карточек на экране
+          perMove: 1,
+          gap: "1rem",
+          autoplay: true,
+          interval: 3000,
+          pauseOnHover: true,
+          pagination: false,
+          arrows: true,
+          speed: 800,
+          breakpoints: {
+            1024: { perPage: 2 },
+            768: { perPage: 1 },
+          },
+        }).mount();
+      });
+    </script>
 
     <section class="business-accent" id="business">
       <div class="container">
@@ -300,6 +421,13 @@
               >
                 Составление и ведение технической документации.
               </li>
+              <li
+                class="business-accent__list-item"
+                data-aos="fade-right"
+                data-aos-delay="600"
+              >
+                Аварийные выезды 24/7
+              </li>
             </ul>
             <a
               href="tel:+1234567890"
@@ -338,8 +466,8 @@
               </h3>
               <div class="portfolio-gallery__content">
                 <p class="portfolio-gallery__description">
-                  Полный электромонтаж "под ключ" в новом жилом комплексе.
-                  Установка щитового оборудования и прокладка кабельных трасс.
+                  Полный электромонтаж "под ключ" в новых жилых комплексах.
+                  Установка щитового оборудования и проводки.
                 </p>
               </div>
             </div>
@@ -389,11 +517,10 @@
           >
             <img src="./src/assets/img/exeple.jpg" alt="Система Умный дом" />
             <div class="portfolio-gallery__overlay">
-              <h3 class="portfolio-gallery__heading">Система "Умный дом"</h3>
+              <!-- <h3 class="portfolio-gallery__heading">Система "Умный дом"</h3> -->
               <div class="portfolio-gallery__content">
                 <p class="portfolio-gallery__description">
-                  Монтаж системы "умный дом" с полным управлением освещением,
-                  климатом и жалюзи через мобильное приложение.
+                  Текущий ремонт, модернизация и реконструкция зданий
                 </p>
               </div>
             </div>
@@ -425,7 +552,7 @@
             />
             <div class="portfolio-gallery__overlay">
               <h3 class="portfolio-gallery__heading">
-                Модернизация электрощита
+                Модернизация щитового оборудования
               </h3>
               <div class="portfolio-gallery__content">
                 <p class="portfolio-gallery__description">
@@ -446,7 +573,7 @@
             />
             <div class="portfolio-gallery__overlay">
               <h3 class="portfolio-gallery__heading">
-                Электрификация производства
+                Электрификация производства и торговых объектов
               </h3>
               <div class="portfolio-gallery__content">
                 <p class="portfolio-gallery__description">
@@ -466,12 +593,14 @@
           <div class="footer__col" data-aos="fade-up">
             <div class="footer__logo">
               <a href="/" class="footer__logo-link">
-                <span class="footer__logo-text">Logo-company</span>
+                <span class="footer__logo-icon">
+                  <img src="./src/assets/icons/ethereum.png" alt="logo" />
+                </span>
+                <p class="footer__description">
+                  Надежные электромонтажные работы любой сложности.
+                </p>
               </a>
             </div>
-            <p class="footer__description">
-              Надежные электромонтажные работы любой сложности.
-            </p>
           </div>
 
           <div class="footer__col" data-aos="fade-up" data-aos-delay="100">
@@ -491,7 +620,8 @@
             <h4 class="footer__heading">Контакты</h4>
             <ul class="footer__list">
               <li>
-                <a href="tel:+1234567890" class="footer__link">
+                <a href="tel:+375297864664" class="footer__link">
+                  <!-- Changed phone number to +375297864664 -->
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -507,11 +637,12 @@
                       d="M22 16.92v3a2 2 0 01-2 2A20.42 20.42 0 013 4.41a2 2 0 012-2c.98 0 1.95.16 2.88.47a2 2 0 011.23 2.18l-.5 2.5a2 2 0 01-.88 1.58A15.42 15.42 0 0014 17.16a2 2 0 011.58-.88l2.5-.5a2 2 0 012.18 1.23c.31.93.47 1.9.47 2.88z"
                     />
                   </svg>
-                  +7 (XXX) XXX-XX-XX
+                  +375 (29) 786-46-64
                 </a>
               </li>
               <li>
-                <a href="mailto:info@el-company.ru" class="footer__link">
+                <!-- Changed email to imarket2015@yandex.ru -->
+                <a href="mailto:imarket2015@yandex.ru" class="footer__link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -528,7 +659,7 @@
                     />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
-                  info@el-company.ru
+                  imarket2015@yandex.ru
                 </a>
               </li>
             </ul>
@@ -546,7 +677,7 @@
           <div class="footer__col" data-aos="fade-up" data-aos-delay="400">
             <h4 class="footer__heading">Адрес</h4>
             <p class="footer__address">
-              г. Москва, ул. Примерная, д. 15, офис 22
+              г. Гродно, ул. Центральная 107, ООО Квант Сити, 230028
             </p>
           </div>
         </div>

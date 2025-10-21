@@ -158,3 +158,88 @@ $blue-button-color: #007bff;
     }
   }
 }
+
+/* --- Splide адаптив --- */
+#services-splide {
+  .splide__arrow {
+    background: rgba(0, 0, 0, 0.4);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background 0.3s;
+
+    svg {
+      fill: #fff;
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+/* --- Модальное окно для звонка --- */
+.call-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 1000;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 320px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+    h3 {
+      margin-bottom: 0.5rem;
+      color: #212121;
+    }
+
+    p {
+      color: #424242;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__phone {
+    display: block;
+    margin: 0.5rem 0 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__close {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: darken(#007bff, 10%);
+    }
+  }
+}
