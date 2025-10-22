@@ -55,7 +55,7 @@
     <!-- Added charset and viewport (already present, kept for completeness) -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" crossorigin href="/assets/index-C6kOWizh.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-Bh5ivI1h.css">
   </head>
   <body>
     <section class="hero" id="home">
@@ -72,6 +72,29 @@
         Your browser does not support the video tag.
       </video>
       <header class="header">
+        <ul class="nav__list-mobile">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#portfolio">Портфолио</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+          <div class="mob-info">
+            <li class="header__info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span
+                >г. Гродно, ул. Центральная 107, ООО Квант Сити, 230028</span
+              >
+            </li>
+            <li class="header__info-item">
+              <i class="fas fa-clock"></i>
+              <span>Пн-Пт: 9:00 - 18:00</span>
+            </li>
+            <li class="header__info-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+375297864664">+375 (29) 786-46-64</a>
+            </li>
+          </div>
+        </ul>
         <div class="header__top">
           <div class="container">
             <div class="header__container">
@@ -121,27 +144,20 @@
           </div>
         </nav>
       </header>
-      <ul class="nav__list-mobile">
-        <li><a href="#home">Главная</a></li>
-        <li><a href="#services">Услуги</a></li>
-        <li><a href="#advantages">Преимущества</a></li>
-        <li><a href="#portfolio">Портфолио</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-        <div class="mob-info">
-          <li class="header__info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>г. Гродно, ул. Центральная 107, ООО Квант Сити, 230028</span>
-          </li>
-          <li class="header__info-item">
-            <i class="fas fa-clock"></i>
-            <span>Пн-Пт: 9:00 - 18:00</span>
-          </li>
-          <li class="header__info-item">
-            <i class="fas fa-phone"></i>
-            <a href="tel:+375297864664">+375 (29) 786-46-64</a>
-          </li>
-        </div>
-      </ul>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const header = document.querySelector(".header-stiky");
+
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+              header.classList.add("header-absolute");
+            } else {
+              header.classList.remove("header-absolute");
+            }
+          });
+        });
+      </script>
+
       <div class="container hero-content">
         <div class="hero__block">
           <h1 class="hero__title">
